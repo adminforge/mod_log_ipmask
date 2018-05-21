@@ -42,4 +42,11 @@ Changes against the original version:
 * Removed the enforced masking of the last octet. By default, it will
   still be masked, but you can configure your log format with `%{32}a`
   to get full IP addresses if you wish.
+* Added IPv6 support [from issue](https://github.com/webfactory/mod_log_ipmask/issues/1)
 
+## How to install under Debian 9 ?
+```
+apt install apache2-dev
+apxs -i -a -c mod_log_ipmask.c
+systemctl restart apache2
+```
